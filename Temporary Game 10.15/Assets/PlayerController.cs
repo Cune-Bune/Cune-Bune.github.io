@@ -36,9 +36,9 @@ public class Jump : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey("q") || Input.GetMouseButton(0) && isGrounded)
+        if (Input.GetKey("Q") || Input.GetMouseButton(0) && isGrounded)
         {
-            rb.AddForce(new Vector3(0, 2, 0) * jumpSpeed, ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 20, 0) * jumpSpeed, ForceMode.Impulse);
             isGrounded = false;
         }
     }
