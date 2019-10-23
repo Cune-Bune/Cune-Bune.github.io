@@ -16,11 +16,13 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         rb.AddForce(new Vector3(moveHorizontal, 0.0f, moveVertical) * speed);
     }
+   
     void OnCollisionEnter(Collision colReport)
     {
         if (colReport.gameObject.CompareTag("Collectible"))
         {
             Destroy(colReport.gameObject);
         }
+        //What makes the collectible disappear on contact
     }
 }

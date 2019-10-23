@@ -25,5 +25,6 @@ public class Predator : MonoBehaviour
         {
             Destroy(colReport.gameObject);
         }
+        // This part is what makes things disappear on contact
     }
 }
