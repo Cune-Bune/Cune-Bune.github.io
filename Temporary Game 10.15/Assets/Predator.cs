@@ -16,6 +16,14 @@ public class Predator : MonoBehaviour
     void Update()
     {
         Vector3 targetDir = Vector3.Normalize(target.position - transform.position);
-        rb.AddForce(targetDir * 100f);
+        rb.AddForce(targetDir * 1f);
+    }
+
+    void OnCollisionEnter(Collision colReport)
+    {
+        if (colReport.gameObject.CompareTag("Player"))
+        {
+            Destroy(colReport.gameObject);
+        }
     }
 }
