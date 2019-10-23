@@ -3,6 +3,7 @@
 public class Jump : MonoBehaviour
 {
     public bool isGrounded;
+    public bool canWalljump;
     Rigidbody rb;
     void Start()
     {
@@ -14,16 +15,21 @@ public class Jump : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (col.gameObject.tag == ("Jumpable") && isGrounded == false)
+        if (col.gameObject.tag == ("Jumpable") && canWalljump == false)
         {
-            isGrounded = true;
+            canWalljump = true;
         }
     }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse);
+            isGrounded = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && canWalljump)
+        {
+            rb.AddForce(new Vector3(4, 7, 0), ForceMode.Impulse);
             isGrounded = false;
         }
     }
