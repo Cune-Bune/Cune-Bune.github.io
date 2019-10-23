@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Boundary
+  - Jumpable
   layers:
   - Default
   - TransparentFX
