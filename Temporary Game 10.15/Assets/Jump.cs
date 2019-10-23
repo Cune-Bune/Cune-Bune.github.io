@@ -30,7 +30,7 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canWalljump)
         {
             rb.AddForce(new Vector3(4, 7, 0), ForceMode.Impulse);
-            isGrounded = false;
+            canWalljump = false;
         }
     }
 }
