@@ -19,12 +19,12 @@ public class Predator : MonoBehaviour
         rb.AddForce(targetDir * 1f);
     }
 
-    void OnCollisionEnter(Collision colReport)
+    /*void OnCollisionEnter(Collision colReport)
     {
         if (colReport.gameObject.CompareTag("Player"))
         {
             Destroy(colReport.gameObject);
         }
         // This part is what makes things disappear on contact
-    }
+    }*/
 }

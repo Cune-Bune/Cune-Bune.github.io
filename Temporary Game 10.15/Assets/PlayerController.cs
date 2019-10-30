@@ -23,6 +23,5 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(colReport.gameObject);
         }
-        //What makes the collectible disappear on contact
     }
 }
