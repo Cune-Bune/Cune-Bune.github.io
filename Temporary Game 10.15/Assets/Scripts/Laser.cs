@@ -18,10 +18,10 @@ public class Laser : MonoBehaviour
             if (Physics.Raycast(laser, out hit, 10000f))
             {
                 Debug.Log("Hit something! The" + hit.transform.gameObject.name + " didn't like that.");
-                if (Input.GetMouseButtonDown(0)) {
 
-                    Destroy(hit.transform.gameObject);
-                }
+
+                Destroy (hit.transform.gameObject);
+                
             }
             else { Input.GetMouseButtonDown(1); Input.GetMouseButtonDown(2); }
         }
