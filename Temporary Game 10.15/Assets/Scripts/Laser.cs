@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+	public float boomAmt = 50f;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,7 +12,8 @@ public class Laser : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {  if (Input.GetMouseButtonDown(0))
+    {
+  if (Input.GetMouseButton(0))
         {
             RaycastHit hit = new RaycastHit();
             Ray laser = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -19,11 +21,12 @@ public class Laser : MonoBehaviour
             {
                 Debug.Log("Hit something! The" + hit.transform.gameObject.name + " didn't like that.");
 
-
-                Destroy (hit.transform.gameObject);
-                
+				if (hit.rigidbody) {
+					hit.rigidbody.AddForce(Vector3.up * boomAmt);
+                                    }
             }
-            else { Input.GetMouseButtonDown(1); Input.GetMouseButtonDown(2); }
+            else { Input.GetMouseButton(1); Input.GetMouseButton(2);
+                 }
         }
     }
 }
