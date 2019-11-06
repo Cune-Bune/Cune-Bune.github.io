@@ -8,6 +8,7 @@ TagManager:
   - Boundary
   - Jumpable
   - Collectible
+  - Target
   layers:
   - Default
   - TransparentFX

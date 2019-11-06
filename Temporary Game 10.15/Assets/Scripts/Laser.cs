@@ -19,11 +19,14 @@ public class Laser : MonoBehaviour
             Ray laser = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(laser, out hit, 10000f))
             {
-                Debug.Log("Hit something! The" + hit.transform.gameObject.name + " didn't like that.");
+             
+                Debug.Log("Hit something! The " + hit.transform.gameObject.name + " didn't like that.");
 
-				if (hit.rigidbody) {
-					hit.rigidbody.AddForce(Vector3.up * boomAmt);
-                                    }
+                Destroy(hit.transform.gameObject); // destroy the object hit
+
+ /*if (hit.rigidbody) {
+                  hit.rigidbody.AddForce(Vector3.up * boomAmt);
+  }*/
             }
             else { Input.GetMouseButton(1); Input.GetMouseButton(2);
                  }
