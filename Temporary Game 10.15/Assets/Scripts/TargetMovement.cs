@@ -15,6 +15,8 @@ public class TargetMovement : MonoBehaviour
     void Update()
     {
         // Set the x position to loop between 0 and 3
+        // This makes the deisgnated thing go back  and forth with or up and down in this case.
+        //This script was shown to me by ShadowKiler
         transform.position =  new Vector3( transform.position.x, Mathf.PingPong(Time.time, 3), transform.position.z);
         transform.position = new Vector3(Mathf.PingPong(Time.time, 3), transform.position.y, transform.position.z);
     }

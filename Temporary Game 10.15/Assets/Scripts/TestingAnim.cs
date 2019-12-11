@@ -41,7 +41,7 @@ public class TestingAnim : MonoBehaviour
             {
              myAnim.SetInteger("State", 1);
             }
-        if (Input.GetKeyDown(KeyCode.Space)) {
+       /* if (Input.GetKeyDown(KeyCode.Space)) {
             myAnim.SetInteger("State", 2);
         }
         if (Input.GetKeyDown(KeyCode.A))
@@ -51,6 +51,6 @@ public class TestingAnim : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             myAnim.SetInteger("State", 4);
-        }
+        }*/
     }
 }
