@@ -24,7 +24,7 @@ public class AntiSteve : MonoBehaviour
         if (triggerReport.name == "Steve") { //this checks the name of whatever thing entered the trigger zone. in this case steve.
 
             Debug.Log("ENEMY SPOTTED");
-            joe.destination = triggerReport.transform.position;
+            joe.destination = triggerReport.transform.position;//JOE MURDERS STEVE
         } 
     }
 }

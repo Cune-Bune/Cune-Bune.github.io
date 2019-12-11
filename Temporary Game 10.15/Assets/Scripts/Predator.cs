@@ -16,7 +16,7 @@ public class Predator : MonoBehaviour
     void Update()
     {
         Vector3 targetDir = Vector3.Normalize(target.position - transform.position);
-        rb.AddForce(targetDir * 1f);
+        rb.AddForce(targetDir * 1f); //This makes the attack speed of basic AI enemies normalized so that they don't suddenly go super sonic speeds and they go toward the player
     }
 
     /*void OnCollisionEnter(Collision colReport)
