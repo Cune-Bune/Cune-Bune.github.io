@@ -37,9 +37,20 @@ public class TestingAnim : MonoBehaviour
         {
             myAnim.SetInteger("State", 0);
         }
-        else
+            else
+            {
+             myAnim.SetInteger("State", 1);
+            }
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            myAnim.SetInteger("State", 2);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            myAnim.SetInteger("State", 1);
+            myAnim.SetInteger("State", 3);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            myAnim.SetInteger("State", 4);
         }
     }
 }
