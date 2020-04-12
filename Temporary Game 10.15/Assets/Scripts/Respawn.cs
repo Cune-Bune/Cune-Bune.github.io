@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-
+    //Put this script onto whatever collider should kill the player.
+    
     [SerializeField]
-    private Transform Player;
+    private Transform Player; //When you apply this script, designate the "Player" to what the player character is.
     [SerializeField]
-    private Transform respawnPoint;
+    private Transform respawnPoint; //Make an invisible/"empty" object and put it where you want the player to respawn.
+    //Then assign that object to "respawn point" when they ask.
 
 
 
